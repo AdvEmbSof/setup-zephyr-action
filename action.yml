@@ -16,7 +16,10 @@ inputs:
   path_west_manifest:
     description: "Path to use as manifest"
     required: false
-
+  secrets:
+      personal_access_token:
+        required: true
+        
 runs:
   using: "composite"
   steps:
@@ -117,4 +120,5 @@ runs:
             ${SETUP_FILE} ${SETUP_OPT}h
         fi
         ${SETUP_FILE} ${SETUP_OPT}c
+
 
